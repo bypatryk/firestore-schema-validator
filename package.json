@@ -1,0 +1,43 @@
+{
+  "author": "Patryk Pawłowski",
+  "name": "firestore-schema-validator",
+  "description": "Interface for creating models, schemas and validate data for Google Cloud Firestore.",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bypatryk/firestore-schema-validator.git"
+  },
+  "keywords": [
+    "schema",
+    "model",
+    "validation",
+    "google",
+    "cloud",
+    "firestore",
+    "odm",
+    "orm"
+  ],
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "test": "jest",
+    "release": "bash scripts/release.sh"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-plugin-promise": "^4.1.1",
+    "jest": "^24.8.0"
+  },
+  "dependencies": {
+    "firebase-admin": "^7.3.0",
+    "moment": "^2.24.0"
+  }
+}
