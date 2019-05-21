@@ -34,10 +34,10 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-plugin-promise": "^4.1.1",
+    "firebase-admin": "^7.3.0",
     "jest": "^24.8.0"
   },
   "dependencies": {
-    "firebase-admin": "^7.3.0",
     "moment": "^2.24.0"
   }
 }
