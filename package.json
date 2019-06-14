@@ -24,8 +24,7 @@
   "scripts": {
     "lint": "eslint .",
     "test": "jest",
-    "docs": "jsdoc2md lib/*.js > DOCS.md",
-    "release": "bash scripts/release.sh"
+    "docs": "jsdoc2md lib/*.js > DOCS.md"
   },
   "engines": {
     "node": ">=8.0.0"
