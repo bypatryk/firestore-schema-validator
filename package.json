@@ -24,6 +24,7 @@
   "scripts": {
     "lint": "eslint .",
     "test": "jest",
+    "docs": "jsdoc2md lib/*.js > DOCS.md",
     "release": "bash scripts/release.sh"
   },
   "engines": {
@@ -35,7 +36,9 @@
     "eslint": "^5.16.0",
     "eslint-plugin-promise": "^4.1.1",
     "firebase-admin": "^7.3.0",
-    "jest": "^24.8.0"
+    "jest": "^24.8.0",
+    "jsdoc": "^3.6.2",
+    "jsdoc-to-markdown": "^5.0.0"
   },
   "dependencies": {
     "moment": "^2.24.0"
