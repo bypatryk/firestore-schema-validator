@@ -2,7 +2,7 @@
   "author": "Patryk Pawłowski",
   "name": "firestore-schema-validator",
   "description": "Interface for creating models, schemas and validate data for Google Cloud Firestore.",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "repository": {
     "type": "git",
     "url": "git://github.com/bypatryk/firestore-schema-validator.git"
