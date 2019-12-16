@@ -37,12 +37,12 @@ const userSchema = schema({
 
 class UserModel extends Model {
   // Path to Cloud Firestore collection.
-  static collectionPath() {
+  static get _collectionPath() {
     return 'users'
   }
 
   // Model Schema.
-  static schema() {
+  static get _schema() {
     return userSchema
   }
 }
@@ -92,11 +92,11 @@ const userSchema = schema({
 })
 
 class UserModel extends Model {
-  static collectionPath() {
+  static get _collectionPath() {
     return 'users'
   }
 
-  static schema() {
+  static get _schema() {
     return userSchema
   }
 
@@ -164,8 +164,6 @@ UserModel.posthook('password', (data, user) => {
 
 ### Working with UserModel
 
-
-
 ```javascript
 const admin = require('firebase-admin')
 const User = require('../UserModel.js')
@@ -194,7 +192,7 @@ console.log(user.toJSON()) // =>
 // }
 
 user.firstName = 'J'
-user.foo = 'bar' // Won't be stored as it's not defined in UserModel.schema
+user.foo = 'bar' // Won't be stored as it's not defined in UserModel._schema
 await user.save() // => instance of UserModel
 
 console.log(user.toJSON()) // =>
