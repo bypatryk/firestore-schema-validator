@@ -35,8 +35,8 @@
         * [.default(defaultValue)](#Field+default) ⇒ <code>this</code>
         * [.nullable()](#Field+nullable) ⇒ <code>this</code>
         * [.optional()](#Field+optional) ⇒ <code>this</code>
-        * [.arrayOf(field, ...args)](#Field+arrayOf) ⇒ <code>this</code>
-        * [.objectOf(fields, ...args)](#Field+objectOf) ⇒ <code>this</code>
+        * [.arrayOf(fieldOrSchema, ...args)](#Field+arrayOf) ⇒ <code>this</code>
+        * [.objectOf(objectOfFieldsOrSchema, ...args)](#Field+objectOf) ⇒ <code>this</code>
     * _static_
         * [.Field](#Field.Field)
             * [new Field(_label)](#new_Field.Field_new)
@@ -147,26 +147,26 @@ Makes Field optional.
 **Kind**: instance method of [<code>Field</code>](#Field)  
 <a name="Field+arrayOf"></a>
 
-### field.arrayOf(field, ...args) ⇒ <code>this</code>
-Defines Field as an Array with items defined by nested Field.
+### field.arrayOf(fieldOrSchema, ...args) ⇒ <code>this</code>
+Defines Field as an Array with items defined by nested Field or Schema.
 
 **Kind**: instance method of [<code>Field</code>](#Field)  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| field | [<code>Field</code>](#Field) | Field. |
+| fieldOrSchema | [<code>Field</code>](#Field) \| [<code>Schema</code>](#Schema) | Field or Schema. |
 | ...args | <code>\*</code> |  |
 
 <a name="Field+objectOf"></a>
 
-### field.objectOf(fields, ...args) ⇒ <code>this</code>
-Defines Field as an Object with entries defined by nested Fields.
+### field.objectOf(objectOfFieldsOrSchema, ...args) ⇒ <code>this</code>
+Defines Field as an Object with entries defined by nested object of Fields or Schema.
 
 **Kind**: instance method of [<code>Field</code>](#Field)  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| fields | [<code>Object.&lt;Field&gt;</code>](#Field) | Object of Fields. |
+| objectOfFieldsOrSchema | [<code>Object.&lt;Field&gt;</code>](#Field) \| [<code>Schema</code>](#Schema) | Object of Fields or Schema. |
 | ...args | <code>\*</code> |  |
 
 <a name="Field.Field"></a>
@@ -214,7 +214,7 @@ Creates an instance of Field.
         * [.posthook(path, cb)](#Model.posthook)
         * [.getById(id)](#Model.getById) ⇒ <code>this</code> \| <code>null</code>
         * [.getBy(key, value)](#Model.getBy) ⇒ <code>this</code> \| <code>null</code>
-        * [.getAllBy(key, value)](#Model.getAllBy) ⇒ <code>Array.&lt;this&gt;</code>
+        * [.getAllBy(key, value, optionalModifiers)](#Model.getAllBy) ⇒ <code>Array.&lt;this&gt;</code>
         * [.create([data])](#Model.create) ⇒
 
 <a name="new_Model_new"></a>
@@ -434,7 +434,7 @@ Fetches Document by key and value pair.
 
 <a name="Model.getAllBy"></a>
 
-### Model.getAllBy(key, value) ⇒ <code>Array.&lt;this&gt;</code>
+### Model.getAllBy(key, value, optionalModifiers) ⇒ <code>Array.&lt;this&gt;</code>
 Fetches all Documents by key and value pair.
 
 **Kind**: static method of [<code>Model</code>](#Model)  
@@ -444,6 +444,7 @@ Fetches all Documents by key and value pair.
 | --- | --- |
 | key | <code>String</code> | 
 | value | <code>\*</code> | 
+| optionalModifiers | <code>array</code> | 
 
 <a name="Model.create"></a>
 

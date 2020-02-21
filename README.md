@@ -222,6 +222,46 @@ await fetchedUser.delete()
 const nonExistingUser = await UserModel.getByEmail('jon.doe@example.com') // => null
 ```
 
+### Nesting Schema
+`field.arrayOf(fieldOrSchema)` and `field.objectOf(objectOfFieldsOrSchema)` accept instances of Schema as an argument, so you can reuse repeatable schemas:
+
+```javascript
+const { schema, field } = require('firestore-schema-validator')
+
+const simplifiedAddressSchema = schema({
+  street: field('Street')
+    .string()
+    .trim(),
+  countryCode: field('Country')
+    .oneOf([
+      'US',
+      'CA',
+    ]),
+  zipCode: field('ZIP Code')
+    .string()
+    .trim(),
+})
+
+const userSchema = schema({
+  firstName: field('First Name')
+    .string()
+    .trim(),
+  lastName: field('Last Name')
+    .string()
+    .trim(),
+  mailingAddress: field('Mailing Address')
+    .objectOf(simplifiedAddressSchema),
+})
+
+const companySchema = schema({
+  name: field('Company Name')
+    .string()
+    .trim(),
+  locations: field('Locations')
+    .arrayOf(simplifiedAddressSchema),
+})
+```
+
 ## TODO
 
 - `Field.prototype.unique()` that checks if the value provided to field is unique in the collection.
