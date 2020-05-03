@@ -146,13 +146,13 @@ UserModel.on('deleted', async (user) => {
 })
 
 // Fired during user.validate() if user.email has changed,
-// but *before* actually validating and storing the data.
+// but *before* validating the data.
 UserModel.prehook('email', (data, user) => {
   // eg. set emailVerificationCode
 })
 
 // Fired during user.validate() if user.email has changed,
-// but *after* actually validating and storing the data.
+// but *after* validating the data.
 UserModel.posthook('email', (data, user) => {
   // eg. send Email Verification Email to User
 })
