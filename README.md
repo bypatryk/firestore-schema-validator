@@ -6,7 +6,7 @@ Inspired by [mongoose](https://github.com/Automattic/mongoose) and [datalize](ht
 
 ## Installation
 
-Requires `firebase-admine` package.
+Requires `firebase-admin` package.
 
 ```bash
 npm install --save firestore-schema-validator
