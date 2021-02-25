@@ -24,7 +24,8 @@
   "scripts": {
     "lint": "eslint .",
     "test": "jest",
-    "docs": "jsdoc2md lib/*.js > DOCS.md"
+    "docs": "jsdoc2md lib/*.js > DOCS.md",
+    "docs-serve": "docsify serve docs"
   },
   "engines": {
     "node": ">=8.0.0"
@@ -32,12 +33,14 @@
   "license": "MIT",
   "devDependencies": {
     "babel-eslint": "^10.0.1",
+    "docsify-cli": "^4.4.2",
     "eslint": "^5.16.0",
     "eslint-plugin-promise": "^4.1.1",
     "firebase-admin": "^7.3.0",
     "jest": "^24.8.0",
-    "jsdoc": "^3.6.2",
-    "jsdoc-to-markdown": "^5.0.0"
+    "jsdoc": "^3.6.6",
+    "jsdoc-to-markdown": "^5.0.0",
+    "typescript": "^4.2.2"
   },
   "dependencies": {
     "moment": "^2.24.0"

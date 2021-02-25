@@ -35,6 +35,7 @@
         * [.default(defaultValue)](#Field+default) ⇒ <code>this</code>
         * [.nullable()](#Field+nullable) ⇒ <code>this</code>
         * [.optional()](#Field+optional) ⇒ <code>this</code>
+        * [.unique()](#Field+unique) ⇒ <code>this</code>
         * [.arrayOf(fieldOrSchema, ...args)](#Field+arrayOf) ⇒ <code>this</code>
         * [.objectOf(objectOfFieldsOrSchema, ...args)](#Field+objectOf) ⇒ <code>this</code>
     * _static_
@@ -143,6 +144,12 @@ Allows Field Data to be null.
 
 ### field.optional() ⇒ <code>this</code>
 Makes Field optional.
+
+**Kind**: instance method of [<code>Field</code>](#Field)  
+<a name="Field+unique"></a>
+
+### field.unique() ⇒ <code>this</code>
+Makes Field unique.
 
 **Kind**: instance method of [<code>Field</code>](#Field)  
 <a name="Field+arrayOf"></a>
